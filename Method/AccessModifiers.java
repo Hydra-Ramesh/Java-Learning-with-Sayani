@@ -2,9 +2,11 @@ package Method;
 import Extra.*;
 class Person{
     private String name;
-    private void setName(String name){
+    public void setName(String name){
         this.name = name;
-
+    }
+    public String getName(){
+        return name;
     }
 }
 class Test{
@@ -29,6 +31,8 @@ class Bike extends Vehicle{
 public class AccessModifiers {
     public static void main(String[] args) {
         Person p = new Person();
+        p.setName("Sayani");
+        System.out.println(p.getName());
         // p.setName("Sayani");
         Test t = new Test();
         t.model = "BMW";
